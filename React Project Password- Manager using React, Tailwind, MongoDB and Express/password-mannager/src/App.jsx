@@ -9,8 +9,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <Manager />
-      <Footer/>
+      <div className='bottom-0'>
+        <Manager />
+      </div>
+      <Footer />
     </>
   )
 }
