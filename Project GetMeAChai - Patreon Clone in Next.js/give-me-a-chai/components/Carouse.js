@@ -25,7 +25,7 @@ const Carouse = () => {
                     >
                         <div className="relative w-full h-full">
                             <iframe
-                                width="80%"
+                                width="100%"
                                 height="100%"
                                 src={`https://www.youtube.com/embed/${video.id}`}
                                 title={video.title}

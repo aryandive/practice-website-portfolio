@@ -37,15 +37,16 @@ export default function Home() {
   //   );
   // }
   return (
+    <>
     <div className="relative overflow-hidden">
       <div className="z-[-2] min-h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
         <section className="pt-20 pb-10">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16" style={{ paddingTop: '8rem' }}>
+          <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16" style={{ paddingTop: '12rem', paddingBottom: '12rem' }}>
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
               We invest in the world’s potential
             </h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-              Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
+              Give ME a Chai makes supporting fun and easy. In just a couple of taps, your fans can make the payment (Give ME a Chai) and leave a message.
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
               <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
@@ -72,7 +73,7 @@ export default function Home() {
         <div className="bg-white h-1 opacity-10 mx-auto w-11/12"></div>
 
         <section className="text-gray-600 body-font py-20">
-          <div className="container px-5 mx-auto">
+          <div className="container mx-auto px-5 sm:px-8 md:px-26 lg:px-42">
             <Carouse />
           </div>
         </section>
@@ -83,5 +84,6 @@ export default function Home() {
 
 
     </div>
+    </>
   )
 }

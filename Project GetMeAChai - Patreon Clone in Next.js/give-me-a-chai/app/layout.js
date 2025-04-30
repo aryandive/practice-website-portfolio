@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeModeScript } from 'flowbite-react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SessionWrapper from "@/components/SessionWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,13 +27,15 @@ export default function RootLayout({ children }) {
         <ThemeModeScript />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900`}>
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <div className="mt-auto">
-          <Footer />
-        </div>
+        <SessionWrapper>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <div className="mt-auto">
+            <Footer />
+          </div>
+        </SessionWrapper>
       </body>
     </html>
   );

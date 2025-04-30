@@ -10,8 +10,11 @@
     "postinstall": "flowbite-react patch"
   },
   "dependencies": {
+    "@auth/mongodb-adapter": "^3.9.0",
     "flowbite-react": "^0.11.7",
+    "mongodb": "^6.16.0",
     "next": "15.3.1",
+    "next-auth": "^5.0.0-beta.27",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
