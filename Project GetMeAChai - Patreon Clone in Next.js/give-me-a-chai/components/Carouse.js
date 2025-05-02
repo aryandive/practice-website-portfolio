@@ -5,10 +5,10 @@ import React from 'react';
 const Carouse = () => {
     const videos = [
         { id: 'JQbjS0_ZfJ0?si=lFloBAqjzLZhEpJ5', title: 'Video 1' },
-        { id: 'JQbjS0_ZfJ0?si=lFloBAqjzLZhEpJ5', title: 'Video 2' },
-        { id: 'JQbjS0_ZfJ0?si=lFloBAqjzLZhEpJ5', title: 'Video 3' },
-        { id: 'JQbjS0_ZfJ0?si=lFloBAqjzLZhEpJ5', title: 'Video 4' },
-        { id: 'JQbjS0_ZfJ0?si=lFloBAqjzLZhEpJ5', title: 'Video 5' },
+        { id: 'QtaorVNAwbI?si=GDSt5myQEgt8lHQo', title: 'Video 2' },
+        { id: 'mNPM0yUiyNs?si=tk2YkO18DuermLHx', title: 'Video 3' },
+        { id: 'Wid1BY8rveA?si=L7X4K9AjA-yefoo5', title: 'Video 4' },
+        { id: 'FDj64m5FOcc?si=NkEv39ZwDY6X2FTq', title: 'Video 5' },
     ];
 
     const [activeIndex, setActiveIndex] = React.useState(0);

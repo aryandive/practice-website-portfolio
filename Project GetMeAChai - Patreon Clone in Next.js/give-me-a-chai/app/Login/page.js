@@ -1,8 +1,17 @@
 "use client"
 import React from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/router'
 
 const Login = () => {
+    const { data: session } = useSession()
+    const router = useRouter()
+
+    if (session) {
+        router.push('/dashboard')
+    }
+
+
     return (
         <>
             <div className="z-[-2] min-h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
@@ -74,7 +83,7 @@ const Login = () => {
                                 </button>
 
                                 {/* GitHub Button */}
-                                <button onClick={()=>{signIn("github")}}
+                                <button onClick={() => { signIn("github") }}
                                     className="flex items-center bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                                 >
                                     <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 73">
