@@ -1,15 +1,33 @@
 import React from 'react'
+import PaymentPage from '@/components/PaymentPage'
+import { notFound } from "next/navigation"
+import connectDb from '@/db/connectDb'
+import User from '@/models/User'
+const Username = async ({ params }) => {
 
-const Username = ({ params }) => {
+    // If the username is not present in the database, show a 404 page
+    const checkUser = async () => {
+        await connectDb()
+        let u = await User.findOne({ username: params.username })
+        if (!u) {
+            return notFound()
+        }
+    }
+    await checkUser()
+
+
+
     return (
-        <div className="z-[-2] min-h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
-            <div className='flex items-center justify-center pt-50 top-30'>
-                <h1 className='text-white z-10'>
-                    ...{params.username}...
-                </h1>
-            </div>
-        </div>
+        <>
+            <PaymentPage username={params.username} />
+        </>
     )
 }
 
 export default Username
+
+export async function generateMetadata({ params }) {
+    return {
+        title: `Support ${params.username} - Get Me A Chai`,
+    }
+}
