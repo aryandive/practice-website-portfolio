@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-const { Schema, model } = mongoose;
+import mongoose, { Schema, model, models } from "mongoose";
 
 const PaymentSchema = new Schema({
     name: { type: String, required: true },
@@ -12,4 +11,5 @@ const PaymentSchema = new Schema({
     done: { type: Boolean, default: false },
 });
 
-export default mongoose.model.Payment || model("Payment", PaymentSchema);
+// ✅ Use `models.Payment` to avoid redefining model during hot reload
+export default models.Payment || model("Payment", PaymentSchema);

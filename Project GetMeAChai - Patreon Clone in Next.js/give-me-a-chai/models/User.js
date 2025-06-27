@@ -1,14 +1,12 @@
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
+import mongoose, { Schema, model, models } from 'mongoose';
 
-const blogSchema = new Schema({
-    email: { type: String, required: tru },
-    name: { type: String },
-    username: { type: String, required: true },
-    Profilepic: { type: String },
-    coverpic: { type: String },
-    createdAT: { type: Date, default: Date.now },
-    updatedAT: { type: Date, default: Date.now },
+const UserSchema = new Schema({
+    username: String,
+    email: String,
+    razorpayid: String,
+    razorpaysecret: String,
+    // Add any other fields here
 });
 
-export default mongoose.models.User || model("User", UserSchema);
+// Avoid redefining model during hot reloads
+export default models.User || model("User", UserSchema);
